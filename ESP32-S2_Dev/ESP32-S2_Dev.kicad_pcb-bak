@@ -5161,7 +5161,7 @@
     )
   )
 
-  (gr_text ESP32-S2-DevBoard-V1 (at 109.22 101.6 90) (layer B.SilkS)
+  (gr_text ESP32-S2-DevBoard-V1 (at 119.38 115.57 180) (layer B.SilkS)
     (effects (font (size 2 2) (thickness 0.3)) (justify mirror))
   )
   (gr_circle (center 105.41 130.81) (end 105.41 132.08) (layer Edge.Cuts) (width 0.05) (tstamp 62837007))
