@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "ESP32-S2 DEV"
 Date "2022-04-28"
-Rev "00"
+Rev "01"
 Comp "Evil Geniuses for a better tommorrow"
 Comment1 ""
 Comment2 ""
@@ -64,7 +64,7 @@ U 1 1 626B70BD
 P 1650 1200
 F 0 "Q1" H 1841 1154 50  0000 L CNN
 F 1 "MMBT3906" H 1300 1350 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 1850 1125 50  0001 L CIN
+F 2 "Package_TO_SOT_SMD:SOT-416" H 1850 1125 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3906.pdf" H 1650 1200 50  0001 L CNN
 	1    1650 1200
 	1    0    0    1   
@@ -858,7 +858,7 @@ Wire Wire Line
 	3000 3950 2750 3950
 Text Label 1100 2650 2    50   ~ 0
 USB_5P0
-Text Label 3150 3750 0    50   ~ 0
+Text Label 3550 3700 0    50   ~ 0
 USB_5P0
 Text Label 2250 3950 0    50   ~ 0
 USB_DPlus
@@ -894,8 +894,6 @@ F 4 "https://www.digikey.com/product-detail/en/silicon-laboratories-inc/CP2102N-
 $EndComp
 Text Label 2100 5800 2    50   ~ 0
 USB_DMinus
-Text Label 2100 6000 2    50   ~ 0
-USB_5P0
 $Comp
 L Device:C_Small C2
 U 1 1 6271A107
@@ -1187,7 +1185,7 @@ Wire Wire Line
 Connection ~ 2900 8400
 Wire Wire Line
 	2900 8400 2650 8400
-Text Label 3050 8200 0    50   ~ 0
+Text Label 3400 8100 0    50   ~ 0
 USB_5P0
 Text Label 2150 8400 0    50   ~ 0
 USB_DP
@@ -1391,18 +1389,6 @@ Wire Wire Line
 	5700 1300 5700 1200
 Text Label 5700 900  2    50   ~ 0
 LD0_3P3
-$Comp
-L bub_oscillators:KC2520C40.0000C2YE00 Y1
-U 1 1 62861CAB
-P 1700 9650
-F 0 "Y1" H 1700 9800 50  0000 C CNN
-F 1 "KC2520C40.0000C2YE00" H 1750 9250 50  0000 C CNN
-F 2 "bub_oscillators:KC2520C40.0000C2YE00" H 1850 8900 50  0001 C CNN
-F 3 "https://ele.kyocera.com/sites/default/files/assets/static/nrnd/kc2520c_c2_2019_e.pdf" H 1700 9650 50  0001 C CNN
-F 4 "https://www.digikey.com/en/products/detail/kyocera-avx/KC2520C40-0000C2YE00/2506201" H 1850 9050 50  0001 C CNN "Digikey"
-	1    1700 9650
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C_Small C9
 U 1 1 62862951
@@ -1631,6 +1617,7 @@ F 2 "Crystal:Crystal_SMD_3215-2Pin_3.2x1.5mm" H 2000 10950 50  0001 C CNN
 F 3 "http://cfd.citizen.co.jp/cms/cfd/pdf/english/CM315D_E.pdf" H 2000 10950 50  0001 C CNN
 F 4 "https://www.digikey.com/en/products/detail/citizen-finedevice-co-ltd/CM315D-32-768KDZF-T/13663659" H 2000 10950 50  0001 C CNN "Digikey"
 F 5 "10095006" H 2000 10950 50  0001 C CNN "XESPN"
+F 6 "https://www.mouser.com/ProductDetail/?qs=byeeYqUIh0Mjq6I26A6tsQ%3D%3D" H 2000 10950 50  0001 C CNN "MOUSER"
 	1    2000 10950
 	-1   0    0    1   
 $EndComp
@@ -2501,4 +2488,52 @@ Wire Notes Line
 	5100 11450 8150 11450
 Wire Notes Line
 	8150 11450 8150 9250
+Text Notes 12100 8400 0    315  ~ 63
+Rev B Notes:\nAdd diode between usb inputs
+$Comp
+L bub_oscillators:KC2520C40.0000C2YE00 Y1
+U 1 1 62AAEBF0
+P 1700 9650
+F 0 "Y1" H 1700 9875 50  0000 C CNN
+F 1 "KC2520C40.0000C2YE00" H 1700 9784 50  0000 C CNN
+F 2 "bub_oscillators:KC2520C40.0000C2YE00" H 1850 8900 50  0001 C CNN
+F 3 "https://ele.kyocera.com/sites/default/files/assets/static/nrnd/kc2520c_c2_2019_e.pdf" H 1700 9650 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/kyocera-avx/KC2520C40-0000C2YE00/2506201" H 1850 9050 50  0001 C CNN "Digikey"
+	1    1700 9650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:B120-E3 D5
+U 1 1 62ACD5DC
+P 3400 3700
+F 0 "D5" H 3400 3483 50  0000 C CNN
+F 1 "B120-E3" H 3400 3574 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 3400 3525 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88946/b120.pdf" H 3400 3700 50  0001 C CNN
+	1    3400 3700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3250 3700 3150 3700
+Wire Wire Line
+	3150 3700 3150 3750
+Connection ~ 3150 3750
+$Comp
+L Diode:B120-E3 D4
+U 1 1 62AE48BA
+P 3250 8100
+F 0 "D4" H 3250 7883 50  0000 C CNN
+F 1 "B120-E3" H 3250 7974 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 3250 7925 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88946/b120.pdf" H 3250 8100 50  0001 C CNN
+	1    3250 8100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3100 8100 3100 8200
+Wire Wire Line
+	3100 8200 3050 8200
+Connection ~ 3050 8200
+Text Label 2100 6000 3    50   ~ 0
+USB_5P0
 $EndSCHEMATC
