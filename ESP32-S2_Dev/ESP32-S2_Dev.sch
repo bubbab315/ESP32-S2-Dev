@@ -1358,9 +1358,9 @@ Wire Wire Line
 	3700 4400 3700 3950
 Wire Wire Line
 	3700 3950 3850 3950
-Text Label 3600 4700 2    50   ~ 0
-DTR
 Text Label 3700 3950 2    50   ~ 0
+DTR
+Text Label 3600 4700 2    50   ~ 0
 RTS
 Wire Wire Line
 	4750 3650 4750 3750
@@ -2406,19 +2406,19 @@ F 4 "https://www.digikey.com/en/products/detail/onsemi/BCW66GLT1G/2623446" H 465
 	1    4650 4700
 	1    0    0    1   
 $EndComp
-Text Label 5400 9650 0    50   ~ 0
+Text Label 7100 9950 0    50   ~ 0
 RST_PROG
 Text Label 6050 9650 0    50   ~ 0
 BOOT_PROG
 $Comp
 L Device:R_Small_US R37
 U 1 1 629CE8DE
-P 5400 9750
-F 0 "R37" H 5600 9700 50  0000 R CNN
-F 1 "470" H 5600 9800 50  0000 R CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 5400 9750 50  0001 C CNN
-F 3 "~" H 5400 9750 50  0001 C CNN
-	1    5400 9750
+P 7100 10150
+F 0 "R37" H 7300 10100 50  0000 R CNN
+F 1 "470" H 7300 10200 50  0000 R CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 7100 10150 50  0001 C CNN
+F 3 "~" H 7100 10150 50  0001 C CNN
+	1    7100 10150
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -2435,24 +2435,24 @@ $EndComp
 $Comp
 L Switch:SW_SPST RST1
 U 1 1 629DA67B
-P 5400 10050
-F 0 "RST1" V 5354 10148 50  0000 L CNN
-F 1 "B3U-1000P" V 5445 10148 50  0000 L CNN
-F 2 "Button_Switch_SMD:SW_SPST_B3U-1000P" H 5400 10050 50  0001 C CNN
-F 3 "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3u.pdf" H 5400 10050 50  0001 C CNN
-F 4 "https://www.digikey.com/en/products/detail/omron-electronics-inc-emc-div/B3U-1000P/1534338" V 5400 10050 50  0001 C CNN "DigiKey"
-	1    5400 10050
+P 7100 10450
+F 0 "RST1" V 7054 10548 50  0000 L CNN
+F 1 "B3U-1000P" V 7145 10548 50  0000 L CNN
+F 2 "Button_Switch_SMD:SW_SPST_B3U-1000P" H 7100 10450 50  0001 C CNN
+F 3 "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3u.pdf" H 7100 10450 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/omron-electronics-inc-emc-div/B3U-1000P/1534338" V 7100 10450 50  0001 C CNN "DigiKey"
+	1    7100 10450
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR044
 U 1 1 629DB7E6
-P 5400 10250
-F 0 "#PWR044" H 5400 10000 50  0001 C CNN
-F 1 "GND" H 5405 10077 50  0000 C CNN
-F 2 "" H 5400 10250 50  0001 C CNN
-F 3 "" H 5400 10250 50  0001 C CNN
-	1    5400 10250
+P 7100 10650
+F 0 "#PWR044" H 7100 10400 50  0001 C CNN
+F 1 "GND" H 7105 10477 50  0000 C CNN
+F 2 "" H 7100 10650 50  0001 C CNN
+F 3 "" H 7100 10650 50  0001 C CNN
+	1    7100 10650
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -2488,8 +2488,6 @@ Wire Notes Line
 	5100 11450 8150 11450
 Wire Notes Line
 	8150 11450 8150 9250
-Text Notes 12100 8400 0    315  ~ 63
-Rev B Notes:\nAdd diode between usb inputs
 $Comp
 L bub_oscillators:KC2520C40.0000C2YE00 Y1
 U 1 1 62AAEBF0
@@ -2536,4 +2534,46 @@ Wire Wire Line
 Connection ~ 3050 8200
 Text Label 2100 6000 3    50   ~ 0
 USB_5P0
+$Comp
+L Device:R_Small_US R9
+U 1 1 62B4B318
+P 7100 9750
+F 0 "R9" H 7300 9700 50  0000 R CNN
+F 1 "10k" H 7300 9800 50  0000 R CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 7100 9750 50  0001 C CNN
+F 3 "~" H 7100 9750 50  0001 C CNN
+	1    7100 9750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7100 9850 7100 10000
+Text Label 7100 9650 2    50   ~ 0
+MCU_3P3
+$Comp
+L Device:C_Small C37
+U 1 1 62B6247E
+P 7500 10100
+F 0 "C37" V 7400 10100 50  0000 R CNN
+F 1 "0.1u" V 7400 10300 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 7500 10100 50  0001 C CNN
+F 3 "~" H 7500 10100 50  0001 C CNN
+	1    7500 10100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 62B62B2B
+P 7500 10200
+F 0 "#PWR0101" H 7500 9950 50  0001 C CNN
+F 1 "GND" H 7505 10027 50  0000 C CNN
+F 2 "" H 7500 10200 50  0001 C CNN
+F 3 "" H 7500 10200 50  0001 C CNN
+	1    7500 10200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 10000 7100 10000
+Connection ~ 7100 10000
+Wire Wire Line
+	7100 10000 7100 10050
 $EndSCHEMATC

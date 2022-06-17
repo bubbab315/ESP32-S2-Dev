@@ -115,3 +115,5 @@ Reference, Value, Footprint, Datasheet, Digikey, DIGIKEY, MOUSER, XESPN, mfn#, D
 "Y1","KC2520C40.0000C2YE00","bub_oscillators:KC2520C40.0000C2YE00","https://ele.kyocera.com/sites/default/files/assets/static/nrnd/kc2520c_c2_2019_e.pdf","https://www.digikey.com/en/products/detail/kyocera-avx/KC2520C40-0000C2YE00/2506201","","","","",""
 "D5","B120-E3","Diode_SMD:D_SMA","http://www.vishay.com/docs/88946/b120.pdf"
 "D4","B120-E3","Diode_SMD:D_SMA","http://www.vishay.com/docs/88946/b120.pdf"
+"R9","10k","Resistor_SMD:R_0402_1005Metric","~"
+"C37","0.1u","Capacitor_SMD:C_0402_1005Metric","~"
