@@ -69,7 +69,6 @@ Reference, Value, Footprint, Datasheet, Digikey, DIGIKEY, MOUSER, XESPN, mfn#, D
 "Y2","Crystal","Crystal:Crystal_SMD_3215-2Pin_3.2x1.5mm","http://cfd.citizen.co.jp/cms/cfd/pdf/english/CM315D_E.pdf","https://www.digikey.com/en/products/detail/citizen-finedevice-co-ltd/CM315D-32-768KDZF-T/13663659","","https://www.mouser.com/ProductDetail/?qs=byeeYqUIh0Mjq6I26A6tsQ%3D%3D","10095006","",""
 "C17","0.1U","Capacitor_SMD:C_0402_1005Metric","~"
 "C19","1u","Capacitor_SMD:C_0402_1005Metric","~"
-"SPI_FLASH_16Mb1","SST25VF016B-50-4I-QAF","Bub_flash:SST25VF016B-50-4I-QAF","https://ww1.microchip.com/downloads/en/DeviceDoc/20005044C.pdf","https://www.digikey.com/en/products/detail/microchip-technology/SST25VF016B-50-4I-QAF/2297795","","","","",""
 "R3","10K(dnp)","Resistor_SMD:R_0402_1005Metric","~"
 "SRAM1","IS62WVS2568FBLL","Package_SO:SOIC-8_3.9x4.9mm_P1.27mm","https://www.issi.com/WW/pdf/IS62-65WVS2568FALL-BLL.pdf","https://www.digikey.com/en/products/detail/issi-integrated-silicon-solution-inc/IS62WVS2568FBLL-20NLI/8563821?s=N4IgjCBcpgLATFUBjKAzAhgGwM4FMAaEAeygG1wA2ADnmoGYQBdIgBwBcoQBldgJwCWAOwDmIAL5EwATmrSkIVJEy5CJciAAMzNp0g9%2BwsZJDxNsRtEXps%2BIqUgVYmymE0B2EEWeuXXkD5g9PLeLmBB-oGaIQFhmtQ6IBxcvIKiEiaIjiA4fBgAtsziQA","","","","",""
 "C15","0.1U","Capacitor_SMD:C_0402_1005Metric","~"
@@ -117,3 +116,4 @@ Reference, Value, Footprint, Datasheet, Digikey, DIGIKEY, MOUSER, XESPN, mfn#, D
 "D4","B120-E3","Diode_SMD:D_SMA","http://www.vishay.com/docs/88946/b120.pdf"
 "R9","10k","Resistor_SMD:R_0402_1005Metric","~"
 "C37","0.1u","Capacitor_SMD:C_0402_1005Metric","~"
+"U4","SPI_FLASH_8MEG","Bub_flash:USON8(2X3)","file:///C:/Users/bleblanc/Downloads/gd25wd80c_rev1.3_20190912.pdf","","https://www.digikey.com/en/products/detail/gigadevice-semiconductor-hk-limited/GD25WD80CEIGR/9484742","","","",""

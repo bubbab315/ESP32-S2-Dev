@@ -1639,8 +1639,6 @@ Text Label 2650 13900 0    50   ~ 0
 SPICLK
 Text Label 1450 13900 2    50   ~ 0
 SPIWP
-Text Label 2650 13800 0    50   ~ 0
-SPIHD
 Text Label 1150 13700 2    50   ~ 0
 SPICS0
 Text Label 1300 14850 2    50   ~ 0
@@ -1656,8 +1654,6 @@ F 3 "" H 1350 14000 50  0001 C CNN
 	1    1350 14000
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	1450 14000 1350 14000
 Text Label 3500 13700 0    50   ~ 0
 MCU_3P3
 $Comp
@@ -1712,23 +1708,9 @@ F 3 "" H 3500 13900 50  0001 C CNN
 	1    3500 13900
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	2650 13700 3200 13700
 Connection ~ 3200 13700
 Wire Wire Line
 	3200 13700 3500 13700
-$Comp
-L BubbaFlash:SST25VF016B-50-4I-QAF SPI_FLASH_16Mb1
-U 1 1 6291918E
-P 1950 13600
-F 0 "SPI_FLASH_16Mb1" H 2000 13650 50  0000 C CNN
-F 1 "SST25VF016B-50-4I-QAF" H 2050 13100 50  0000 C CNN
-F 2 "Bub_flash:SST25VF016B-50-4I-QAF" H 1750 13600 50  0001 C CNN
-F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/20005044C.pdf" H 1750 13600 50  0001 C CNN
-F 4 "https://www.digikey.com/en/products/detail/microchip-technology/SST25VF016B-50-4I-QAF/2297795" H 1950 13600 50  0001 C CNN "Digikey"
-	1    1950 13600
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R_Small_US R3
 U 1 1 62983434
@@ -1740,8 +1722,6 @@ F 3 "~" H 1250 13500 50  0001 C CNN
 	1    1250 13500
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1450 13700 1250 13700
 Wire Wire Line
 	1250 13600 1250 13700
 Connection ~ 1250 13700
@@ -2576,4 +2556,30 @@ Wire Wire Line
 Connection ~ 7100 10000
 Wire Wire Line
 	7100 10000 7100 10050
+$Comp
+L BubbaFlash:GD25WD80CEIGR U4
+U 1 1 62B065AB
+P 2250 13600
+F 0 "U4" H 2050 13765 50  0000 C CNN
+F 1 "SPI_FLASH_8MEG" H 2050 13674 50  0000 C CNN
+F 2 "Bub_flash:USON8(2X3)" H 2250 13600 50  0001 C CNN
+F 3 "file:///C:/Users/bleblanc/Downloads/gd25wd80c_rev1.3_20190912.pdf" H 2250 13600 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/gigadevice-semiconductor-hk-limited/GD25WD80CEIGR/9484742" H 2250 13600 50  0001 C CNN "DIGIKEY"
+	1    2250 13600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 13700 3200 13700
+Wire Wire Line
+	1350 14000 1600 14000
+Wire Wire Line
+	1600 13900 1450 13900
+Wire Wire Line
+	1250 13700 1600 13700
+Wire Wire Line
+	2650 13900 2500 13900
+Wire Wire Line
+	2650 14000 2500 14000
+Wire Wire Line
+	1450 13800 1600 13800
 $EndSCHEMATC
